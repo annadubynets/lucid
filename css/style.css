@@ -1,0 +1,377 @@
+@charset "UTF-8";
+@import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";
+@import "https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.min.css";
+@import "bootstrap.min.css";
+@import "bootstrap-theme.min.css";
+header {
+  background-image: url("../images/lucid_header_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar-default {
+  border: none;
+  background-color: transparent;
+  background-image: none;
+}
+.navbar-default .navbar-nav > li {
+  padding: 42px 0px;
+  position: relative;
+}
+.navbar-default .navbar-nav > li:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background-color: #008ed6;
+  transition: 0.5s;
+  position: absolute;
+}
+.navbar-default .navbar-nav > li:before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background-color: #16151b;
+  position: absolute;
+  top: 92px;
+  left: 30%;
+}
+.navbar-default .navbar-nav > li:hover:after {
+  width: 65%;
+}
+.navbar-default .navbar-nav > li:hover:before {
+  width: 5%;
+  z-index: 1;
+}
+.navbar-default .navbar-nav > li a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  color: #fffefe;
+  font-size: 16px;
+}
+.navbar-default .navbar-nav > li a:hover {
+  color: #fffefe;
+}
+
+.navbar-header {
+  position: relative;
+  top: 45px;
+}
+
+.main-heading {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  color: #ffffff;
+  padding-bottom: 24px;
+}
+
+.secondary-heading {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #008ed6;
+  text-transform: uppercase;
+  margin-top: 65px;
+}
+
+.main-desc {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #999999;
+  margin-bottom: 65px;
+}
+
+.btn-primary {
+  background-color: transparent;
+  background-image: none;
+  border: solid 1px #4c4b4f;
+}
+
+.download-btn {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 20px 0;
+  width: 160px;
+  margin-right: 20px;
+}
+.download-btn:hover {
+  background-color: #008ed6;
+}
+
+.product-section {
+  padding: 65px;
+}
+
+.product-heading {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 46px;
+  color: #1a1a1a;
+  padding-bottom: 72px;
+}
+.product-heading span {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #008ed6;
+  text-transform: uppercase;
+  display: block;
+}
+
+.product-secondary-heading {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #1a1a1a;
+}
+
+.product-desc {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #999999;
+}
+
+.circle-img {
+  border: solid 2px #e2e2e2;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  color: #008ed6;
+  font-size: 32px;
+}
+
+.glyphicon-blackboard {
+  position: relative;
+}
+.glyphicon-blackboard:before {
+  position: absolute;
+  top: -12px;
+  left: -15px;
+}
+
+.glyphicon-cog {
+  position: relative;
+}
+.glyphicon-cog:before {
+  position: absolute;
+  top: -12px;
+  left: -15px;
+}
+
+.glyphicon-thumbs-up {
+  position: relative;
+}
+.glyphicon-thumbs-up:before {
+  position: absolute;
+  top: -12px;
+  left: -15px;
+}
+
+.glyphicon-phone {
+  position: relative;
+}
+.glyphicon-phone:before {
+  position: absolute;
+  top: -12px;
+  left: -15px;
+}
+
+.customize-section {
+  background-color: #f2f2f2;
+  padding: 64px 0 82px;
+}
+
+.plan-section {
+  background-image: url("../images/plans_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 60px 0;
+}
+
+.plan-heading {
+  color: #ffffff;
+}
+
+.plan-desc {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.owl-dots .owl-dot span {
+  width: 8px;
+  height: 8px;
+  border: solid 1px #4e484b;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 22px;
+  margin-top: 135px;
+}
+
+.owl-dots {
+  text-align: center;
+}
+
+.owl-dots .owl-dot.active span {
+  background-color: #ffffff;
+  width: 14px;
+  height: 14px;
+  position: relative;
+  top: 3px;
+}
+
+.review-desc {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+}
+.review-desc span {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.payment-section {
+  padding: 60px 0px;
+}
+
+.payment-heading {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #1a1a1a;
+  padding: 25px 0px;
+}
+
+.business-heading {
+  color: #008ed6;
+}
+
+.price-desc {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  color: #1a1a1a;
+  padding: 37px 0px;
+}
+.price-desc sup {
+  font-size: 48px;
+}
+.price-desc span {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #999999;
+  display: block;
+}
+
+.payment-desc {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #999999;
+  padding: 50px 0px 45px;
+}
+.payment-desc span {
+  color: #008ed6;
+}
+
+.order-now-btn {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #008ed6;
+  text-transform: uppercase;
+  width: 160px;
+  border: solid 1px #e0e0e0;
+  padding: 20px 0px;
+  margin-bottom: 30px;
+}
+.order-now-btn:hover {
+  background-color: #008ed6;
+  border: none;
+}
+
+.contact-us-section {
+  background-color: #ededed;
+  padding: 60px 0px 370px;
+}
+
+.glyphicon-style {
+  color: #008ed6;
+  font-size: 32px;
+}
+
+footer {
+  background-color: #15141a;
+  padding: 55px 0px;
+}
+
+.copyright-desc {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #444348;
+  text-transform: uppercase;
+}
+
+.behance-img:after {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+  color: #444348;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.dribble-img:after {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+  color: #444348;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.twitter-img:after {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+  color: #444348;
+  font-size: 14px;
+}
+
+.facebook-img:after {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+  color: #444348;
+  font-size: 14px;
+}
+
+.instagram-img:after {
+  font-family: "Font Awesome 5 Brands";
+  content: "";
+  color: #444348;
+  font-size: 14px;
+}
+
+.social-links {
+  display: inline-block;
+  margin: 0px 15px 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
