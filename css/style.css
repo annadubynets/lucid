@@ -17,9 +17,26 @@ header {
   background-color: transparent;
   background-image: none;
 }
+@media screen and (max-width: 767px) {
+  .navbar-default .navbar-toggle {
+    position: relative;
+    top: -10px;
+  }
+}
+.navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
 .navbar-default .navbar-nav > li {
   padding: 42px 0px;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .navbar-default .navbar-nav > li {
+    padding: 15px 0px;
+  }
 }
 .navbar-default .navbar-nav > li:after {
   content: "";
@@ -30,6 +47,11 @@ header {
   transition: 0.5s;
   position: absolute;
 }
+@media screen and (max-width: 767px) {
+  .navbar-default .navbar-nav > li:after {
+    display: none;
+  }
+}
 .navbar-default .navbar-nav > li:before {
   content: "";
   display: block;
@@ -39,6 +61,11 @@ header {
   position: absolute;
   top: 92px;
   left: 30%;
+}
+@media screen and (max-width: 767px) {
+  .navbar-default .navbar-nav > li:before {
+    display: none;
+  }
 }
 .navbar-default .navbar-nav > li:hover:after {
   width: 65%;
@@ -56,10 +83,33 @@ header {
 .navbar-default .navbar-nav > li a:hover {
   color: #fffefe;
 }
+@media screen and (max-width: 767px) {
+  .navbar-default .navbar-nav > li a:hover {
+    color: #8c8c8c;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    position: relative;
+    top: -10px;
+    padding-bottom: 80px;
+  }
+}
 
 .navbar-header {
   position: relative;
   top: 45px;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-toggle {
+    position: relative;
+    top: -10px;
+  }
+}
+.navbar-toggle:hover {
+  background-color: transparent;
 }
 
 .main-heading {
@@ -78,6 +128,11 @@ header {
   text-transform: uppercase;
   margin-top: 65px;
 }
+@media screen and (max-width: 767px) {
+  .secondary-heading {
+    margin-top: 25px;
+  }
+}
 
 .main-desc {
   font-family: "Source Sans Pro", sans-serif;
@@ -85,6 +140,11 @@ header {
   font-size: 18px;
   color: #999999;
   margin-bottom: 65px;
+}
+@media screen and (max-width: 992px) {
+  .main-desc {
+    margin-bottom: 35px;
+  }
 }
 
 .btn-primary {
@@ -106,9 +166,31 @@ header {
 .download-btn:hover {
   background-color: #008ed6;
 }
+@media screen and (max-width: 992px) {
+  .download-btn {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .device-img {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .device-img {
+    display: none;
+  }
+}
 
 .product-section {
-  padding: 65px;
+  padding: 65px 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .product-img {
+    width: 100%;
+  }
 }
 
 .product-heading {
@@ -117,6 +199,7 @@ header {
   font-size: 46px;
   color: #1a1a1a;
   padding-bottom: 72px;
+  line-height: 38px;
 }
 .product-heading span {
   font-family: "Source Sans Pro", sans-serif;
@@ -125,6 +208,26 @@ header {
   color: #008ed6;
   text-transform: uppercase;
   display: block;
+}
+.product-heading:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 3%;
+  background-color: #008ed6;
+  position: absolute;
+  top: 130px;
+  left: 46%;
+}
+.product-heading:before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #008ed6;
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  width: 3%;
 }
 
 .product-secondary-heading {
@@ -139,6 +242,44 @@ header {
   font-weight: 400;
   font-size: 18px;
   color: #999999;
+  margin-bottom: 74px;
+}
+
+@media screen and (max-width: 1200px) {
+  .customize-img {
+    width: 100%;
+  }
+}
+
+.social-icon, .features-icon:before, .features-icon, .retina-icon:before, .retina-icon, .responsive-icon:before, .responsive-icon, .design-icon:before, .design-icon {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #1b1b1b;
+}
+.social-icon:before, .features-icon:before, .retina-icon:before, .responsive-icon:before, .design-icon:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  color: #1899da;
+}
+
+.design-icon:before {
+  content: "";
+}
+
+.responsive-icon:before {
+  content: "";
+}
+
+.retina-icon:before {
+  content: "";
+}
+
+.features-icon:before {
+  content: "";
 }
 
 .circle-img {
@@ -151,37 +292,10 @@ header {
   font-size: 32px;
 }
 
-.glyphicon-blackboard {
+.product-style {
   position: relative;
 }
-.glyphicon-blackboard:before {
-  position: absolute;
-  top: -12px;
-  left: -15px;
-}
-
-.glyphicon-cog {
-  position: relative;
-}
-.glyphicon-cog:before {
-  position: absolute;
-  top: -12px;
-  left: -15px;
-}
-
-.glyphicon-thumbs-up {
-  position: relative;
-}
-.glyphicon-thumbs-up:before {
-  position: absolute;
-  top: -12px;
-  left: -15px;
-}
-
-.glyphicon-phone {
-  position: relative;
-}
-.glyphicon-phone:before {
+.product-style:before {
   position: absolute;
   top: -12px;
   left: -15px;
@@ -239,6 +353,8 @@ header {
   font-weight: 400;
   font-size: 16px;
   color: #ffffff;
+  position: relative;
+  top: 10px;
 }
 .review-desc span {
   font-family: "Source Sans Pro", sans-serif;
@@ -246,6 +362,24 @@ header {
   font-size: 14px;
   color: #ffffff;
   text-transform: uppercase;
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .review-desc {
+    margin-bottom: 20px;
+  }
+}
+
+.theme-section {
+  background-color: #15141a;
+  padding: 68px 0px;
+}
+
+.theme-desc {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: #ffffff;
 }
 
 .payment-section {
@@ -287,10 +421,15 @@ header {
   font-weight: 400;
   font-size: 18px;
   color: #999999;
-  padding: 50px 0px 45px;
+  margin: 50px 20px;
 }
 .payment-desc span {
   color: #008ed6;
+}
+@media screen and (max-width: 767px) {
+  .payment-desc {
+    margin: 30px 0px;
+  }
 }
 
 .order-now-btn {
@@ -311,12 +450,54 @@ header {
 
 .contact-us-section {
   background-color: #ededed;
-  padding: 60px 0px 370px;
+  padding-top: 60px;
 }
 
 .glyphicon-style {
   color: #008ed6;
   font-size: 32px;
+}
+
+.input-form {
+  background-color: #15141a;
+  padding: 58px 0px;
+  position: relative;
+  top: 65px;
+}
+
+.form-control {
+  background-color: transparent;
+  border: solid 1px #444348;
+}
+
+.input-field {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #606062;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  padding: 20px 17px;
+}
+
+#exampleFormControlTextarea1 {
+  resize: none;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 20px 0px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.send-btn:hover {
+  background-color: #008ed6;
 }
 
 footer {
@@ -332,41 +513,39 @@ footer {
   text-transform: uppercase;
 }
 
-.behance-img:after {
-  font-family: "Font Awesome 5 Brands";
-  content: "";
+.behance-img {
   color: #444348;
-  font-size: 14px;
-  display: inline-block;
+}
+.behance-img:hover {
+  color: #0856f7;
 }
 
-.dribble-img:after {
-  font-family: "Font Awesome 5 Brands";
-  content: "";
+.dribble-img {
   color: #444348;
-  font-size: 14px;
-  display: inline-block;
+}
+.dribble-img:hover {
+  color: #97516C;
 }
 
-.twitter-img:after {
-  font-family: "Font Awesome 5 Brands";
-  content: "";
+.twitter-img {
   color: #444348;
-  font-size: 14px;
+}
+.twitter-img:hover {
+  color: #3ec2f3;
 }
 
-.facebook-img:after {
-  font-family: "Font Awesome 5 Brands";
-  content: "";
+.facebook-img {
   color: #444348;
-  font-size: 14px;
+}
+.facebook-img:hover {
+  color: #3b5997;
 }
 
-.instagram-img:after {
-  font-family: "Font Awesome 5 Brands";
-  content: "";
+.instagram-img {
   color: #444348;
-  font-size: 14px;
+}
+.instagram-img:hover {
+  color: #ffffff;
 }
 
 .social-links {

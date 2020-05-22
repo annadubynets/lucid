@@ -14,383 +14,559 @@ $primary-color: #ffffff;
   }
 }
 
-header {
-  background-image: url("../images/lucid_header_bg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+  header {
+    background-image: url("../images/lucid_header_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
-.navbar-default {
-  border: none;
-  background-color: transparent;
-  background-image: none;
-  .navbar-nav>li {
-    padding: 42px 0px;
-    position: relative;
-    &:after {
-      content: "";
-      display: block;
-      height: 3px;
-      width: 0;
-      background-color: #008ed6;
-      transition: 0.5s;
-      position: absolute;
-    }
-    &:before {
-      content: "";
-      display: block;
-      height: 3px;
-      width: 0;
-      background-color: #16151b;
-      position: absolute;
-      top: 92px;
-      left: 30%;
-    }
-    &:hover:after {
-      width: 65%;
-    }
-
-    &:hover:before {
-      width: 5%;
-      z-index: 1;
-    }
-    a {
-      font-family: $font-family-primary;
-      font-weight: 400;
-      color: #fffefe;
-      font-size: 16px;
+  .navbar-default {
+    border: none;
+    background-color: transparent;
+    background-image: none;
+    .navbar-toggle {
+      @include max-screen(767px) {
+        position: relative;
+        top: -10px;
+      }
       &:hover {
+        background-color: transparent;
+      }
+      &:focus {
+        background-color: transparent;
+      }
+    }
+    .navbar-nav>li {
+      padding: 42px 0px;
+      position: relative;
+      @include max-screen(767px) {
+        padding: 15px 0px;
+      }
+      &:after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0;
+        background-color: #008ed6;
+        transition: 0.5s;
+        position: absolute;
+        @include max-screen(767px) {
+          display: none;
+        }
+      }
+      &:before {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0;
+        background-color: #16151b;
+        position: absolute;
+        top: 92px;
+        left: 30%;
+        @include max-screen(767px) {
+          display: none;
+        }
+      }
+      &:hover:after {
+        width: 65%;
+      }
+
+      &:hover:before {
+        width: 5%;
+        z-index: 1;
+      }
+      a {
+        font-family: $font-family-primary;
+        font-weight: 400;
         color: #fffefe;
+        font-size: 16px;
+        &:hover {
+          color: #fffefe;
+        }
+        @include max-screen(767px) {
+          &:hover {
+            color: #8c8c8c;
+          }
+        }
       }
     }
   }
-}
 
-.navbar-header {
-  position: relative;
-  top: 45px;
-}
-
-.main-heading {
-  font-family: $font-family-primary;
-  font-weight: 700;
-  font-size: 48px;
-  color: $primary-color;
-  padding-bottom: 24px;
-}
-
-.secondary-heading {
-  font-family: $font-family-primary;
-  font-weight: 600;
-  font-size: 14px;
-  color: #008ed6;
-  text-transform: uppercase;
-  margin-top: 65px;
-}
-
-.main-desc {
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-size: 18px;
-  color: #999999;
-  margin-bottom: 65px;
-}
-
-.btn-primary {
-  background-color: transparent;
-  background-image: none;
-  border: solid 1px #4c4b4f;
-}
-
-.download-btn {
-  font-family: $font-family-primary;
-  font-weight: 600;
-  font-size: 14px;
-  color: $primary-color;
-  text-transform: uppercase;
-  padding: 20px 0;
-  width: 160px;
-  margin-right: 20px;
-  &:hover {
-    background-color: #008ed6;
+  .navbar-brand {
+    @include max-screen(767px) {
+      position: relative;
+      top: -10px;
+      padding-bottom: 80px;
+    }
   }
-}
 
-.product-section {
-  padding: 65px;
-}
+  .navbar-header {
+    position: relative;
+    top: 45px;
+  }
 
-.product-heading {
-  font-family: $font-family-primary;
-  font-weight: 600;
-  font-size: 46px;
-  color: #1a1a1a;
-  padding-bottom: 72px;
-  span {
+  .navbar-toggle {
+    @include max-screen(767px) {
+      position: relative;
+      top: -10px;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .main-heading {
+    font-family: $font-family-primary;
+    font-weight: 700;
+    font-size: 48px;
+    color: $primary-color;
+    padding-bottom: 24px;
+  }
+
+  .secondary-heading {
     font-family: $font-family-primary;
     font-weight: 600;
     font-size: 14px;
     color: #008ed6;
     text-transform: uppercase;
-    display: block;
+    margin-top: 65px;
+    @include max-screen(767px) {
+      margin-top: 25px;
+    }
   }
-}
 
-.product-secondary-heading {
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-size: 24px;
-  color: #1a1a1a;
-}
-
-.product-desc {
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-size: 18px;
-  color: #999999;
-}
-
-.circle-img {
-  border: solid 2px #e2e2e2;
-  border-radius: 50%;
-  width: 90px;
-  height: 90px;
-  display: inline-block;
-  color: #008ed6;
-  font-size: 32px;
-}
-
-.glyphicon-blackboard {
-  position: relative;
-  &:before {
-    position: absolute;
-    top: -12px;
-    left: -15px;
-  }
-}
-
-.glyphicon-cog {
-  position: relative;
-  &:before {
-    position: absolute;
-    top: -12px;
-    left: -15px;
-  }
-}
-
-.glyphicon-thumbs-up {
-  position: relative;
-  &:before {
-    position: absolute;
-    top: -12px;
-    left: -15px;
-  }
-}
-
-.glyphicon-phone {
-  position: relative;
-  &:before {
-    position: absolute;
-    top: -12px;
-    left: -15px;
-  }
-}
-.customize-section {
-  background-color: #f2f2f2;
-  padding: 64px 0 82px;
-}
-
-.plan-section {
-  background-image: url("../images/plans_bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 60px 0;
-}
-
-.plan-heading {
-  color: $primary-color;
-}
-
-.plan-desc {
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 24px;
-  color: $primary-color;
-}
-
-.owl-dots .owl-dot span {
-  width: 8px;
-  height: 8px;
-  border: solid 1px #4e484b;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 22px;
-  margin-top: 135px;
-}
-.owl-dots {
-  text-align: center;
-}
-
-.owl-dots .owl-dot.active span {
-  background-color: $primary-color;
-  width: 14px;
-  height: 14px;
-  position: relative;
-  top: 3px;
-}
-
-.review-desc {
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-size: 16px;
-  color: $primary-color;
-  span {
-    font-family: $font-family-primary;
-    font-weight: 400;
-    font-size: 14px;
-    color: $primary-color;
-    text-transform: uppercase;
-  }
-}
-
-.payment-section {
-  padding: 60px 0px;
-}
-
-.payment-heading {
-  font-family: $font-family-primary;
-  font-weight: 600;
-  font-size: 24px;
-  color: #1a1a1a;
-  padding: 25px 0px;
-}
-
-.business-heading {
-  color: #008ed6;
-}
-
-.price-desc {
-  font-family: $font-family-primary;
-  font-weight: 600;
-  font-size: 60px;
-  color: #1a1a1a;
-  padding: 37px 0px;
-  sup {
-    font-size: 48px;
-  }
-  span {
+  .main-desc {
     font-family: $font-family-primary;
     font-weight: 400;
     font-size: 18px;
     color: #999999;
-    display: block;
+    margin-bottom: 65px;
+    @include max-screen(992px) {
+      margin-bottom: 35px;
+    }
   }
-}
 
-.payment-desc {
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-size: 18px;
-  color: #999999;
-  padding: 50px 0px 45px;
-  span {
+  .btn-primary {
+    background-color: transparent;
+    background-image: none;
+    border: solid 1px #4c4b4f;
+  }
+
+  .download-btn {
+    font-family: $font-family-primary;
+    font-weight: 600;
+    font-size: 14px;
+    color: $primary-color;
+    text-transform: uppercase;
+    padding: 20px 0;
+    width: 160px;
+    margin-right: 20px;
+    &:hover {
+      background-color: #008ed6;
+    }
+    @include max-screen(992px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .device-img {
+    @include max-screen(992px) {
+      display: none;
+    }
+    @include max-screen(767px) {
+      display: none;
+    }
+  }
+
+  .product-section {
+    padding: 65px 0px;
+  }
+
+  .product-img {
+    @include max-screen(767px) {
+      width: 100%;
+    }
+  }
+
+  .product-heading {
+    font-family: $font-family-primary;
+    font-weight: 600;
+    font-size: 46px;
+    color: #1a1a1a;
+    padding-bottom: 72px;
+    line-height: 38px;
+    span {
+      font-family: $font-family-primary;
+      font-weight: 600;
+      font-size: 14px;
+      color: #008ed6;
+      text-transform: uppercase;
+      display: block;
+    }
+    &:after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 3%;;
+      background-color: #008ed6;
+      position: absolute;
+      top: 130px;
+      left: 46%;
+    }
+    &:before {
+      content: "";
+      display: block;
+      height: 3px;
+      background-color: #008ed6;
+      position: absolute;
+      top: 130px;
+      left: 50%;
+      width: 3%;
+    }
+  }
+
+  .product-secondary-heading {
+    font-family: $font-family-primary;
+    font-weight: 400;
+    font-size: 24px;
+    color: #1a1a1a;
+  }
+
+  .product-desc {
+    font-family: $font-family-primary;
+    font-weight: 400;
+    font-size: 18px;
+    color: #999999;
+    margin-bottom: 74px;
+  }
+
+  .customize-img {
+    @include max-screen(1200px) {
+      width: 100%;
+    }
+  }
+
+  .social-icon {
+    font-family: $font-family-primary;
+    font-weight: 400;
+    font-size: 18px;
+    color: #1b1b1b;
+    &:before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      color:#1899da;
+    }
+  }
+
+  .design-icon {
+    @extend .social-icon;
+    &:before {
+      @extend .social-icon;
+      content: "\f091";
+    }
+  }
+
+  .responsive-icon {
+    @extend .social-icon;
+    &:before {
+      @extend .social-icon;
+      content: "\f10b";
+    }
+  }
+
+  .retina-icon {
+    @extend .social-icon;
+
+    &:before {
+      @extend .social-icon;
+      content: "\f0e7";
+    }
+  }
+
+  .features-icon {
+    @extend .social-icon;
+
+    &:before {
+      @extend .social-icon;
+      content: "\f017";
+    }
+  }
+
+  .circle-img {
+    border: solid 2px #e2e2e2;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    color: #008ed6;
+    font-size: 32px;
+  }
+
+  .product-style {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: -12px;
+      left: -15px;
+    }
+  }
+
+  .customize-section {
+    background-color: #f2f2f2;
+    padding: 64px 0 82px;
+  }
+
+  .plan-section {
+    background-image: url("../images/plans_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 60px 0;
+  }
+
+  .plan-heading {
+    color: $primary-color;
+  }
+
+  .plan-desc {
+    font-family: $font-family-primary;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    color: $primary-color;
+  }
+
+  .owl-dots .owl-dot span {
+    width: 8px;
+    height: 8px;
+    border: solid 1px #4e484b;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 22px;
+    margin-top: 135px;
+  }
+
+  .owl-dots {
+    text-align: center;
+  }
+
+  .owl-dots .owl-dot.active span {
+    background-color: $primary-color;
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: 3px;
+  }
+
+  .review-desc {
+    font-family: $font-family-primary;
+    font-weight: 400;
+    font-size: 16px;
+    color: $primary-color;
+    position: relative;
+    top: 10px;
+    span {
+      font-family: $font-family-primary;
+      font-weight: 400;
+      font-size: 14px;
+      color: $primary-color;
+      text-transform: uppercase;
+      display: block;
+    }
+    @include max-screen(767px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .theme-section {
+    background-color: #15141a;
+    padding: 68px 0px;
+  }
+
+  .theme-desc {
+    font-family: $font-family-primary;
+    font-weight: 600;
+    font-size: 36px;
+    color: $primary-color;
+  }
+
+  .payment-section {
+    padding: 60px 0px;
+  }
+
+  .payment-heading {
+    font-family: $font-family-primary;
+    font-weight: 600;
+    font-size: 24px;
+    color: #1a1a1a;
+    padding: 25px 0px;
+  }
+
+  .business-heading {
     color: #008ed6;
   }
-}
 
-.order-now-btn {
-  font-family: $font-family-primary;
-  font-weight: 600;
-  font-size: 14px;
-  color: #008ed6;
-  text-transform: uppercase;
-  width: 160px;
-  border: solid 1px #e0e0e0;
-  padding: 20px 0px;
-  margin-bottom: 30px;
-  &:hover {
-    background-color: #008ed6;
-    border: none;
+  .price-desc {
+    font-family: $font-family-primary;
+    font-weight: 600;
+    font-size: 60px;
+    color: #1a1a1a;
+    padding: 37px 0px;
+
+    sup {
+      font-size: 48px;
+    }
+
+    span {
+      font-family: $font-family-primary;
+      font-weight: 400;
+      font-size: 18px;
+      color: #999999;
+      display: block;
+    }
   }
-}
 
-.contact-us-section {
-  background-color: #ededed;
-  padding: 60px 0px 370px;
-}
+  .payment-desc {
+    font-family: $font-family-primary;
+    font-weight: 400;
+    font-size: 18px;
+    color: #999999;
+    margin: 50px 20px;
+    span {
+      color: #008ed6;
+    }
+    @include max-screen(767px) {
+      margin: 30px 0px;
+    }
+  }
 
-.glyphicon-style {
-  color: #008ed6;
-  font-size: 32px;
-}
-
-footer {
-  background-color: #15141a;
-  padding: 55px 0px;
-}
-
-.copyright-desc {
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-size: 14px;
-  color: #444348;
-  text-transform: uppercase;
-}
-
-.behance-img {
-  &:after {
-    font-family: 'Font Awesome 5 Brands';
-    content: "\f1b4";
-    color: #444348;
+  .order-now-btn {
+    font-family: $font-family-primary;
+    font-weight: 600;
     font-size: 14px;
+    color: #008ed6;
+    text-transform: uppercase;
+    width: 160px;
+    border: solid 1px #e0e0e0;
+    padding: 20px 0px;
+    margin-bottom: 30px;
+
+    &:hover {
+      background-color: #008ed6;
+      border: none;
+    }
+  }
+
+  .contact-us-section {
+    background-color: #ededed;
+    padding-top: 60px
+  }
+
+  .glyphicon-style {
+    color: #008ed6;
+    font-size: 32px;
+  }
+
+  .input-form {
+    background-color: #15141a;
+    padding: 58px 0px;
+    position: relative;
+    top: 65px;
+  }
+
+  .form-control {
+    background-color: transparent;
+    border: solid 1px #444348;
+  }
+
+  .input-field {
+    font-family: $font-family-primary;
+    font-weight: 400;
+    font-size: 14px;
+    color: #606062;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .form-control {
+    padding: 20px 17px;
+  }
+
+  #exampleFormControlTextarea1 {
+    resize: none;
+  }
+
+  .send-btn {
+    width: 100%;
+    padding: 20px 0px;
+    font-family: $font-family-primary;
+    font-weight: 600;
+    font-size: 14px;
+    color: $primary-color;
+    text-transform: uppercase;
+    &:hover {
+      background-color: #008ed6;
+    }
+  }
+
+  footer {
+    background-color: #15141a;
+    padding: 55px 0px;
+  }
+
+  .copyright-desc {
+    font-family: $font-family-primary;
+    font-weight: 400;
+    font-size: 14px;
+    color: #444348;
+    text-transform: uppercase;
+  }
+
+  .behance-img {
+    color: #444348;
+    &:hover {
+      color: #0856f7;
+    }
+  }
+
+  .dribble-img {
+    color: #444348;
+    &:hover {
+      color: #97516C;
+    }
+  }
+
+  .twitter-img {
+    color: #444348;
+    &:hover {
+      color: #3ec2f3;
+    }
+  }
+
+
+  .facebook-img {
+    color: #444348;
+    &:hover {
+      color: #3b5997;
+    }
+  }
+
+  .instagram-img {
+    color: #444348;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .social-links {
     display: inline-block;
+    margin: 0px 15px 30px;
   }
-}
-
-.dribble-img {
-  &:after {
-    font-family: 'Font Awesome 5 Brands';
-    content: "\f17d";
-    color: #444348;
-    font-size: 14px;
-    display: inline-block;
-  }
-}
-
-.twitter-img {
-  &:after {
-    font-family: 'Font Awesome 5 Brands';
-    content: "\f099";
-    color: #444348;
-    font-size: 14px;
-  }
-}
-
-.facebook-img {
-  &:after {
-    font-family: 'Font Awesome 5 Brands';
-    content: "\f39e";
-    color: #444348;
-    font-size: 14px;
-  }
-}
-
-.instagram-img {
-  &:after {
-    font-family: 'Font Awesome 5 Brands';
-    content: "\f16d";
-    color: #444348;
-    font-size: 14px;
-  }
-}
-
-.social-links {
-  display: inline-block;
-  margin: 0px 15px 30px;
-}
 
 
 
