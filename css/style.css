@@ -387,6 +387,10 @@ header {
   font-size: 36px;
   color: #ffffff;
 }
+.theme-desc span {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+}
 @media screen and (max-width: 1200px) {
   .theme-desc {
     font-size: 30px;

@@ -399,6 +399,10 @@ $primary-color: #ffffff;
     font-weight: 600;
     font-size: 36px;
     color: $primary-color;
+    span {
+      font-family: $font-family-primary;
+      font-weight: 300;
+    }
     @include max-screen(1200px) {
       font-size: 30px;
     }
