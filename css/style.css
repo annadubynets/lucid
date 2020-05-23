@@ -297,7 +297,7 @@ header {
 }
 .product-style:before {
   position: absolute;
-  top: -12px;
+  top: -9px;
   left: -15px;
 }
 
@@ -324,6 +324,12 @@ header {
   font-style: italic;
   font-size: 24px;
   color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .review-margin {
+    margin-bottom: 20px;
+  }
 }
 
 .owl-dots .owl-dot span {
@@ -380,6 +386,11 @@ header {
   font-weight: 600;
   font-size: 36px;
   color: #ffffff;
+}
+@media screen and (max-width: 1200px) {
+  .theme-desc {
+    font-size: 30px;
+  }
 }
 
 .payment-section {

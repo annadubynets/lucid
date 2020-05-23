@@ -311,7 +311,7 @@ $primary-color: #ffffff;
 
     &:before {
       position: absolute;
-      top: -12px;
+      top: -9px;
       left: -15px;
     }
   }
@@ -339,6 +339,12 @@ $primary-color: #ffffff;
     font-style: italic;
     font-size: 24px;
     color: $primary-color;
+  }
+
+  .review-margin {
+    @include max-screen(767px) {
+      margin-bottom: 20px;
+    }
   }
 
   .owl-dots .owl-dot span {
@@ -393,6 +399,9 @@ $primary-color: #ffffff;
     font-weight: 600;
     font-size: 36px;
     color: $primary-color;
+    @include max-screen(1200px) {
+      font-size: 30px;
+    }
   }
 
   .payment-section {
