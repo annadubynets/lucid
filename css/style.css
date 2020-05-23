@@ -251,6 +251,10 @@ header {
   }
 }
 
+ul {
+  list-style-type: none;
+}
+
 .social-icon, .features-icon:before, .features-icon, .retina-icon:before, .retina-icon, .responsive-icon:before, .responsive-icon, .design-icon:before, .design-icon {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
@@ -264,6 +268,7 @@ header {
   width: 16px;
   height: 16px;
   color: #1899da;
+  padding-right: 30px;
 }
 
 .design-icon:before {

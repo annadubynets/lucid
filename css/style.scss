@@ -247,6 +247,10 @@ $primary-color: #ffffff;
     }
   }
 
+  ul {
+    list-style-type: none;
+  }
+
   .social-icon {
     font-family: $font-family-primary;
     font-weight: 400;
@@ -259,6 +263,7 @@ $primary-color: #ffffff;
       width: 16px;
       height: 16px;
       color:#1899da;
+      padding-right: 30px;
     }
   }
 
