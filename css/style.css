@@ -31,14 +31,20 @@ header {
 }
 .navbar-default .navbar-nav > li {
   padding: 42px 0px;
-  position: relative;
 }
 @media screen and (max-width: 767px) {
   .navbar-default .navbar-nav > li {
     padding: 15px 0px;
   }
 }
-.navbar-default .navbar-nav > li:after {
+.navbar-default .navbar-nav > li a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  color: #fffefe;
+  font-size: 16px;
+  position: relative;
+}
+.navbar-default .navbar-nav > li a:after {
   content: "";
   display: block;
   height: 3px;
@@ -46,39 +52,23 @@ header {
   background-color: #008ed6;
   transition: 0.5s;
   position: absolute;
+  bottom: -13px;
 }
-@media screen and (max-width: 767px) {
-  .navbar-default .navbar-nav > li:after {
-    display: none;
-  }
-}
-.navbar-default .navbar-nav > li:before {
+.navbar-default .navbar-nav > li a:before {
   content: "";
   display: block;
   height: 3px;
-  width: 0;
+  width: 2px;
+  margin-left: -1px;
   background-color: #16151b;
+  transition: 0.5s;
   position: absolute;
-  top: 92px;
-  left: 30%;
+  bottom: -13px;
+  left: 50%;
+  z-index: 2;
 }
-@media screen and (max-width: 767px) {
-  .navbar-default .navbar-nav > li:before {
-    display: none;
-  }
-}
-.navbar-default .navbar-nav > li:hover:after {
-  width: 65%;
-}
-.navbar-default .navbar-nav > li:hover:before {
-  width: 5%;
-  z-index: 1;
-}
-.navbar-default .navbar-nav > li a {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  color: #fffefe;
-  font-size: 16px;
+.navbar-default .navbar-nav > li a:hover:after {
+  width: 100%;
 }
 .navbar-default .navbar-nav > li a:hover {
   color: #fffefe;
@@ -87,6 +77,12 @@ header {
   .navbar-default .navbar-nav > li a:hover {
     color: #8c8c8c;
   }
+}
+
+.nav > li > a {
+  margin: 10px 15px;
+  padding: 0;
+  display: inline-block;
 }
 
 @media screen and (max-width: 767px) {
@@ -177,11 +173,6 @@ header {
     display: none;
   }
 }
-@media screen and (max-width: 767px) {
-  .device-img {
-    display: none;
-  }
-}
 
 .product-section {
   padding: 65px 0px;
@@ -209,26 +200,6 @@ header {
   text-transform: uppercase;
   display: block;
 }
-.product-heading:after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 3%;
-  background-color: #008ed6;
-  position: absolute;
-  top: 130px;
-  left: 46%;
-}
-.product-heading:before {
-  content: "";
-  display: block;
-  height: 3px;
-  background-color: #008ed6;
-  position: absolute;
-  top: 130px;
-  left: 50%;
-  width: 3%;
-}
 
 .product-secondary-heading {
   font-family: "Source Sans Pro", sans-serif;
@@ -254,14 +225,14 @@ header {
 ul {
   list-style-type: none;
 }
-
-.social-icon, .features-icon:before, .features-icon, .retina-icon:before, .retina-icon, .responsive-icon:before, .responsive-icon, .design-icon:before, .design-icon {
+ul .social-icon, ul .features-icon:before, ul .features-icon, ul .retina-icon:before, ul .retina-icon, ul .responsive-icon:before, ul .responsive-icon, ul .design-icon:before, ul .design-icon {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #1b1b1b;
+  text-decoration: none;
 }
-.social-icon:before, .features-icon:before, .retina-icon:before, .responsive-icon:before, .design-icon:before {
+ul .social-icon:before, ul .features-icon:before, ul .retina-icon:before, ul .responsive-icon:before, ul .design-icon:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   display: inline-block;

@@ -39,48 +39,41 @@ $primary-color: #ffffff;
     }
     .navbar-nav>li {
       padding: 42px 0px;
-      position: relative;
       @include max-screen(767px) {
         padding: 15px 0px;
-      }
-      &:after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 0;
-        background-color: #008ed6;
-        transition: 0.5s;
-        position: absolute;
-        @include max-screen(767px) {
-          display: none;
-        }
-      }
-      &:before {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 0;
-        background-color: #16151b;
-        position: absolute;
-        top: 92px;
-        left: 30%;
-        @include max-screen(767px) {
-          display: none;
-        }
-      }
-      &:hover:after {
-        width: 65%;
-      }
-
-      &:hover:before {
-        width: 5%;
-        z-index: 1;
       }
       a {
         font-family: $font-family-primary;
         font-weight: 400;
         color: #fffefe;
         font-size: 16px;
+        position: relative;
+        &:after {
+          content: "";
+          display: block;
+          height: 3px;
+          width: 0;
+          background-color: #008ed6;
+          transition: 0.5s;
+          position: absolute;
+          bottom: -13px;
+        }
+        &:before {
+          content: "";
+          display: block;
+          height: 3px;
+          width: 2px;
+          margin-left: -1px;
+          background-color: #16151b;
+          transition: 0.5s;
+          position: absolute;
+          bottom: -13px;
+          left: 50%;
+          z-index: 2;
+        }
+        &:hover:after {
+          width: 100%;
+        }
         &:hover {
           color: #fffefe;
         }
@@ -92,6 +85,12 @@ $primary-color: #ffffff;
       }
     }
   }
+
+.nav > li > a {
+  margin: 10px 15px;
+  padding: 0;
+  display: inline-block;
+}
 
   .navbar-brand {
     @include max-screen(767px) {
@@ -174,9 +173,6 @@ $primary-color: #ffffff;
     @include max-screen(992px) {
       display: none;
     }
-    @include max-screen(767px) {
-      display: none;
-    }
   }
 
   .product-section {
@@ -204,26 +200,6 @@ $primary-color: #ffffff;
       text-transform: uppercase;
       display: block;
     }
-    &:after {
-      content: "";
-      display: block;
-      height: 3px;
-      width: 3%;;
-      background-color: #008ed6;
-      position: absolute;
-      top: 130px;
-      left: 46%;
-    }
-    &:before {
-      content: "";
-      display: block;
-      height: 3px;
-      background-color: #008ed6;
-      position: absolute;
-      top: 130px;
-      left: 50%;
-      width: 3%;
-    }
   }
 
   .product-secondary-heading {
@@ -249,21 +225,21 @@ $primary-color: #ffffff;
 
   ul {
     list-style-type: none;
-  }
-
-  .social-icon {
-    font-family: $font-family-primary;
-    font-weight: 400;
-    font-size: 18px;
-    color: #1b1b1b;
-    &:before {
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      color:#1899da;
-      padding-right: 30px;
+    .social-icon {
+      font-family: $font-family-primary;
+      font-weight: 400;
+      font-size: 18px;
+      color: #1b1b1b;
+      text-decoration: none;
+      &:before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        color:#1899da;
+        padding-right: 30px;
+      }
     }
   }
 
